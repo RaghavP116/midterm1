@@ -260,7 +260,12 @@ p {
         grid-template-columns: 1fr;
     }
 
-    .gallery1 img, .gallery2 img {
+    .gallery1 img {
+        max-width: 100%;
+        margin-bottom: 15px;
+        margin-left: 65px;
+    }
+    .gallery2 img{
         max-width: 100%;
         margin-bottom: 15px;
     }
