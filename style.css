@@ -8,43 +8,48 @@ html, body {
 body {
     background-color: #F1F1F1;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
     gap: 2rem;
     width: 100%;
-    color: #333333;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 header {
     text-align: center;
     color: white;
     background-color: #E43d12;
-    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav {
-    width: 100%;
     display: grid;
-    grid-template-columns: 2.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
+    grid-template-columns: repeat(7, 1fr);
     gap: 10px;
     color: #E43d12;
-    margin: 5px;
+    text-align: center;
+    width: 100%;
 }
 
-/* .navtools {
-    background-color: #E43d12;
-} */
-
 .navsec {
-    padding: 10px 15px;
-    font-size: 25px;
-    text-align: center;
+    padding: 10px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #004B87;
 }
 
 h2 {
@@ -52,7 +57,7 @@ h2 {
     color: #E43d12;
     text-transform: uppercase;
     margin-bottom: 10px;
-    margin-left: 10px;
+    text-align: center;
 }
 
 p {
@@ -60,13 +65,16 @@ p {
     line-height: 1.5;
     color: #056571;
     text-align: justify;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
 #pic {
     display: grid;
-    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-columns: 1fr 1.4fr;
     gap: 30px;
-    margin-left: 10px;
+    width: 100%;
+    align-items: center;
 }
 
 #discoveries {
@@ -76,7 +84,6 @@ p {
     width: 80%;
     text-align: center;
     margin-top: 10px;
-    margin-left: 15px;
 }
 
 .discovery-item {
@@ -128,15 +135,14 @@ p {
 #publications {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     padding: 10px;
 }
 
 .paper {
     border-radius: 10px;
-    margin: 5px;
     text-align: center;
-    align-items: center;
     padding: 20px;
     color: #E43d12;
     background-color: #F7C58C;
@@ -157,14 +163,15 @@ p {
     background-color: #F4F4F9;
     padding: 20px;
     border-radius: 8px;
+    width: 100%;
 }
 
 #gallery {
     background-color: #F07361;
     padding: 10px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    margin: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .gallery1 {
@@ -175,7 +182,6 @@ p {
     margin-left: 80px;
     margin-bottom: 20px;
 }
-
 .gallery2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -186,62 +192,53 @@ p {
 
 @media screen and (max-width: 700px) {
     header {
-        padding: 15px;
+       
         text-align: center;
     }
 
     nav {
         grid-template-columns: 1fr;
+        text-align: center;
         width: 100%;
     }
 
     .navsec {
         font-size: 16px;
-        padding: 8px;
-        text-align: center;
-        width: 100%;
         background-color: #E43d12;
         color: white;
         text-decoration: none;
-    }
-
-    h2 {
-        font-size: 18px;
         text-align: center;
-        margin: 10px 0;
-    }
-
-    .discovery-btn {
-        font-size: 14px;
-        padding: 15px;
         width: 100%;
-        background-color: #008080;
-        border: 2px solid black;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-bottom: 15px;
+  
     }
 
-    .discovery-btn:hover {
+    .navsec:hover {
         background-color: #004B87;
+        padding-left: -10px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0 10px;
+        max-width: 100%;
+    }
+
+    #pic {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    #discoveries {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 15px;
+        padding: 0 15px;
     }
 
     .discovery-btn img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .discovery-content {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: white;
-        border-radius: 5px;
-        border: 1px solid black;
-        text-align: center;
-        color: #333333;
+        max-width: 250px;
     }
 
     #publications {
@@ -253,23 +250,14 @@ p {
         width: 100%;
         padding: 15px;
         margin-bottom: 15px;
-        background-color: #F7C58C;
-        text-align: center;
-        color: #E43d12;
-        border-radius: 10px;
     }
 
     #gallery {
-        background-color: #F07361;
-        padding: 10px;
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding: 20px;
     }
 
     .gallery1, .gallery2 {
         grid-template-columns: 1fr;
-        margin-left: 0;
-        margin-bottom: 15px;
     }
 
     .gallery1 img, .gallery2 img {
@@ -277,16 +265,9 @@ p {
         margin-bottom: 15px;
     }
 
-    #discoveries {
+    #fun_blg {
         grid-template-columns: 1fr;
-        gap: 15px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .container, #pic {
-        display: block;
-        width: 100%;
+        gap: 10px;
     }
 
     .container > * {
@@ -294,19 +275,10 @@ p {
         margin-bottom: 20px;
     }
 
-    .discovery-item, #pic, #publications, #gallery, #discoveries {
-        display: block;
-        width: 100%;
-    }
-
     .discovery-btn img, .paper img, #gallery img {
         width: 100%;
         max-width: 300px;
         height: auto;
         margin-bottom: 10px;
-    }
-    .fun_blg{
-        display: grid;
-        gap: 10rem;
     }
 }
