@@ -1,0 +1,312 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #F1F1F1;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 2rem;
+    width: 100%;
+    color: #333333;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #E43d12;
+    margin: 10px;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
+    gap: 10px;
+    color: #E43d12;
+    margin: 5px;
+}
+
+/* .navtools {
+    background-color: #E43d12;
+} */
+
+.navsec {
+    padding: 10px 15px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 24px;
+    color: #E43d12;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #056571;
+    text-align: justify;
+}
+
+#pic {
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 30px;
+    margin-left: 10px;
+}
+
+#discoveries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.discovery-item {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    background-color: #E0E0E0;
+}
+
+.discovery-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #008080;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.discovery-btn:hover {
+    background-color: #004B87;
+}
+
+.discovery-btn img {
+    width: 400px;
+    height: 100px;
+}
+
+.arrow {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.discovery-content {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+    width: 470px;
+    text-align: center;
+    color: #333333;
+}
+
+#publications {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+.paper {
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    color: #E43d12;
+    background-color: #F7C58C;
+}
+
+.paper p {
+    color: #E43d12;
+}
+
+.publink {
+    text-decoration: none;
+    color: #008F95;
+}
+
+#fun_blg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F4F4F9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#gallery {
+    background-color: #F07361;
+    padding: 10px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin: 10px;
+}
+
+.gallery1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.gallery2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    margin-left: 145px;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .navsec {
+        font-size: 16px;
+        padding: 8px;
+        text-align: center;
+        width: 100%;
+        background-color: #E43d12;
+        color: white;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .discovery-btn {
+        font-size: 14px;
+        padding: 15px;
+        width: 100%;
+        background-color: #008080;
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .discovery-btn:hover {
+        background-color: #004B87;
+    }
+
+    .discovery-btn img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .discovery-content {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-align: center;
+        color: #333333;
+    }
+
+    #publications {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .paper {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #F7C58C;
+        text-align: center;
+        color: #E43d12;
+        border-radius: 10px;
+    }
+
+    #gallery {
+        background-color: #F07361;
+        padding: 10px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .gallery1, .gallery2 {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .gallery1 img, .gallery2 img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #discoveries {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container, #pic {
+        display: block;
+        width: 100%;
+    }
+
+    .container > * {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .discovery-item, #pic, #publications, #gallery, #discoveries {
+        display: block;
+        width: 100%;
+    }
+
+    .discovery-btn img, .paper img, #gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .fun_blg{
+        display: grid;
+        gap: 10rem;
+    }
+}
